@@ -16,10 +16,12 @@ namespace Facebook.Yoga
     {
 #if UNITY_IOS && !UNITY_EDITOR || __IOS__
         private const string DllName = "__Internal";
+#elif __ANDROID__
+        private const string DllName = "libyoga";
 #else
         private const string DllName = "yoga";
 #endif
-#if !__IOS__
+#if !__IOS__ && !__ANDROID__
         [DllImport(DllName)]
         public static extern void YGInteropSetLogger(
             [MarshalAs(UnmanagedType.FunctionPtr)] YogaLogger.Func func);

@@ -14,12 +14,12 @@ namespace Facebook.Yoga
 {
     internal static class YogaLogger
     {
-#if !__IOS__
+#if !__IOS__ && !__ANDROID__
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate void Func(YogaLogLevel level, string message);
 #endif
         private static bool _initialized;
-#if !__IOS__
+#if !__IOS__ && !__ANDROID__
         private static Func _managedLogger = null;
 
         public static Func Logger = null;
@@ -28,7 +28,7 @@ namespace Facebook.Yoga
         {
             if (!_initialized)
             {
-#if !__IOS__
+#if !__IOS__ && !__ANDROID__
                 _managedLogger = (level, message) => {
                     if (Logger != null)
                     {

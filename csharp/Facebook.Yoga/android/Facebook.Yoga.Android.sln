@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Yoga.Android", "Facebook.Yoga.Android.csproj", "{4BD1FC4C-11A3-4674-B315-4F8C08410EC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.YogaKit.Android", "Facebook.YogaKit.Android\Facebook.YogaKit.Android.csproj", "{BE8F6874-AA3C-4222-8342-01CD9F92C764}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Yoga.Android.Test", "Facebook.Yoga.Android.Test\Facebook.Yoga.Android.Test.csproj", "{15A216E2-1930-4529-8DEC-91E68D71A5FB}"
 EndProject
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BD1FC4C-11A3-4674-B315-4F8C08410EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BD1FC4C-11A3-4674-B315-4F8C08410EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BD1FC4C-11A3-4674-B315-4F8C08410EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BD1FC4C-11A3-4674-B315-4F8C08410EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8F6874-AA3C-4222-8342-01CD9F92C764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8F6874-AA3C-4222-8342-01CD9F92C764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8F6874-AA3C-4222-8342-01CD9F92C764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8F6874-AA3C-4222-8342-01CD9F92C764}.Release|Any CPU.Build.0 = Release|Any CPU
 		{15A216E2-1930-4529-8DEC-91E68D71A5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15A216E2-1930-4529-8DEC-91E68D71A5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15A216E2-1930-4529-8DEC-91E68D71A5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -73,5 +73,11 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Facebook.YogaKit.Android\Facebook.YogaKit.Android.csproj">
+      <Project>{BE8F6874-AA3C-4222-8342-01CD9F92C764}</Project>
+      <Name>Facebook.YogaKit.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

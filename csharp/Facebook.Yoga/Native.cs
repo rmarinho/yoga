@@ -17,7 +17,7 @@ namespace Facebook.Yoga
 #if UNITY_IOS && !UNITY_EDITOR || __IOS__
         private const string DllName = "__Internal";
 #elif __ANDROID__
-        private const string DllName = "libyoga";
+		private const string DllName = "yoga";
 #else
         private const string DllName = "yoga";
 #endif

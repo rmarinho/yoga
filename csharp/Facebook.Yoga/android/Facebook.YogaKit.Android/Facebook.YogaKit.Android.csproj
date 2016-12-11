@@ -132,13 +132,22 @@
 		</ProjectReference>
 	</ItemGroup>
 	<ItemGroup>
-		<EmbeddedNativeLibrary Include="lib\armeabi-v7\libyoga.so">
+		<EmbeddedNativeLibrary Include="lib\armeabi-v7a\libyoga.so">
+			<Abi>armeabi-v7a</Abi>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedNativeLibrary>
+		<EmbeddedNativeLibrary Include="lib\armeabi\libyoga.so">
+			<Abi>armeabi</Abi>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedNativeLibrary>
+		<EmbeddedNativeLibrary Include="lib\x86\libyoga.so">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</EmbeddedNativeLibrary>
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="lib\" />
-		<Folder Include="lib\armeabi-v7\" />
+		<Folder Include="lib\armeabi-v7a\" />
+		<Folder Include="lib\x86\" />
 	</ItemGroup>
 	<Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 	<Import Project="..\CustomBuildAction.targets" />

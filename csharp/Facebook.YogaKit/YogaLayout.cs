@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Drawing;
 #if __IOS__
 using NativeView = UIKit.UIView;
+#elif __ANDROID__
+using NativeView = Android.Views.View;
 #endif
 
 namespace Facebook.YogaKit
@@ -818,7 +820,7 @@ namespace Facebook.YogaKit
 				node.SetMeasureFunction(null);
 				// Create a list of all the subviews that we are going to use for layout.
 				var subviewsToInclude = new List<NativeView>();
-				foreach (var subview in view.Subviews)
+				foreach (var subview in GetChildren(view))
 				{
 					if (subview.Yoga().IsIncludeInLayout)
 					{
@@ -875,9 +877,9 @@ namespace Facebook.YogaKit
 
 			if (!yoga.IsLeaf)
 			{
-				for (int i = 0; i < view.Subviews.Length; i++)
+				foreach (var subView in GetChildren(view))
 				{
-					ApplyLayoutToViewHierarchy(view.Subviews[i]);
+					ApplyLayoutToViewHierarchy(subView);
 				}
 			}
 		}

@@ -715,9 +715,11 @@ namespace Facebook.YogaKit
 			NativeView view = null;
 			if (_viewRef.TryGetTarget(out view))
 			{
-				float width = 0;
-				float height = 0;
+				float width = _node.Width.Value;
+				float height = _node.Height.Value;
+#if __IOS__
 				GetWidthHeightOfNativeView(view, out width, out height);
+#endif
 				CalculateLayoutWithSize(this, width, height);
 				ApplyLayoutToViewHierarchy(view);
 			}
@@ -872,8 +874,10 @@ namespace Facebook.YogaKit
 				return;
 
 			var node = yoga._node;
+			var topLeft = new PointF(node.LayoutX, node.LayoutY);
+			var bottomRight = new PointF(topLeft.X + node.LayoutWidth, topLeft.Y + node.LayoutHeight);
 
-			ApplyLayoutToNativeView(view, node);
+			ApplyLayoutToNativeView(view, topLeft, bottomRight);
 
 			if (!yoga.IsLeaf)
 			{

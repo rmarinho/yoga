@@ -11,6 +11,12 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Facebook.Yoga.Shared", "..\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Facebook.Yoga.Shared.Tests", "..\tests\Facebook.Yoga\Facebook.Yoga.Shared.Tests.shproj", "{4EDC82D9-A201-4831-8FE0-98F468F8E4AE}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Facebook.YogaKit.Shared", "..\Facebook.YogaKit\Facebook.YogaKit.Shared.shproj", "{A24B3BA6-3143-4FFF-B8B8-1EDF166F5F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.YogaKit.Android.Sample", "Facebook.YogaKit.Android.Sample\Facebook.YogaKit.Android.Sample.csproj", "{636B33C0-F8EF-47C7-9771-BFF0EB8C5EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.YogaKit.Android", "Facebook.YogaKit.Android\Facebook.YogaKit.Android.csproj", "{8A185D21-DD64-49AE-8E68-5F291BAB6F76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,9 +31,18 @@ Global
 		{EDF7CF8B-5640-4E1D-A2C7-E4BC8BE44363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF7CF8B-5640-4E1D-A2C7-E4BC8BE44363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF7CF8B-5640-4E1D-A2C7-E4BC8BE44363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636B33C0-F8EF-47C7-9771-BFF0EB8C5EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636B33C0-F8EF-47C7-9771-BFF0EB8C5EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636B33C0-F8EF-47C7-9771-BFF0EB8C5EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636B33C0-F8EF-47C7-9771-BFF0EB8C5EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A185D21-DD64-49AE-8E68-5F291BAB6F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A185D21-DD64-49AE-8E68-5F291BAB6F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A185D21-DD64-49AE-8E68-5F291BAB6F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A185D21-DD64-49AE-8E68-5F291BAB6F76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{91C42D32-291D-4B72-90B4-551663D60B8B} = {4804A8E6-E7B7-4F9E-A446-3DE8E73DB38A}
 		{4EDC82D9-A201-4831-8FE0-98F468F8E4AE} = {4804A8E6-E7B7-4F9E-A446-3DE8E73DB38A}
+		{A24B3BA6-3143-4FFF-B8B8-1EDF166F5F4A} = {4804A8E6-E7B7-4F9E-A446-3DE8E73DB38A}
 	EndGlobalSection
 EndGlobal

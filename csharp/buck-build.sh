@@ -12,7 +12,6 @@ fi
 #!/bin/bash
 
 
-export ANDROID_NDK=/Users/vagrant/Library/Developer/Xamarin/android-ndk/android-ndk-r11c
 buck build //:yoga
 buck build //csharp:yoganet-ios
 buck build //csharp:yoganet#default,shared

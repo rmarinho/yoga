@@ -6,7 +6,6 @@ fi
 #!/bin/bash
 
 echo "Building Buck!"
-brew install ant
 cd lib
 git clone https://github.com/facebook/buck.git
 cd buck

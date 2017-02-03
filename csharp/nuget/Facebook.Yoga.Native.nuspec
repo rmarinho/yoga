@@ -19,7 +19,7 @@
 
   <files>
     <!-- build -->
-    <file src="Facebook.Yoga.Native.targets" target="build\netstandard1.0"/>
+    <file src="Facebook.Yoga.Native.targets" target="build\netstandard1.6"/>
 
     <!-- lib -->
     <file src="_._" target="lib\netstandard1.6"/>

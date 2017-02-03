@@ -15,10 +15,10 @@
   </metadata>
   <files>
     <!-- iOS -->
-   	<file src="../iOS/Facebook.Yoga.iOS/bin/Release/*.dll" target="lib/Xamarin.iOS10" />
+   	<file src="..\yoga_ios\bin\Release\*.dll" target="lib\Xamarin.iOS10" />
    	<!-- macOS -->
-   	<file src="../Mac/bin/Release/*.dll" target="lib/Xamarin.Mac20" />
+   	<file src="..\yoga_mac\bin\Release\*.dll" target="lib\Xamarin.Mac20" />
    	<!-- android -->
-   	<file src="../Android/Facebook.Yoga.Android/bin/Release/*.dll" target="lib/MonoAndroid" />
+   	<file src="..\yoga_android\bin\Facebook.Yoga.Android\bin\Release\*.dll" target="lib\MonoAndroid" />
   </files>
 </package>

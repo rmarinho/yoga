@@ -24,6 +24,8 @@
     <!-- lib -->
     <file src="_._" target="lib\netstandard"/>
 
+  <!--   <file src="runtimes/osx-x64/native/libsqlite3.dylib" target="runtimes/osx-x64/native" />-->
+
     <!-- Native -->
     <file src="..\yoga_native\bin\x86\Release\Yoga.dll" target="runtimes\win-x86\native"/>
     <file src="..\yoga_native\bin\x86\Release\Yoga.pdb" target="runtimes\win-x86\native"/>

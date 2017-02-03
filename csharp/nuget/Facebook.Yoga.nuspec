@@ -30,8 +30,8 @@
     <file src="..\yoga_windows\bin\x64\Release\netstandard1.4\Facebook.Yoga.dll" target="runtimes\win-x64\lib\netstandard"/>
     <file src="..\yoga_windows\bin\x64\Release\netstandard1.4\Facebook.Yoga.pdb" target="runtimes\win-x64\lib\netstandard"/>
     
-    <file src="..\yoga_windows\bin\ARM\Release\netstandard1.4\Facebook.Yoga.dll" target="runtimes\win8-arm\lib\netstandard"/>
-    <file src="..\yoga_windows\bin\ARM\Release\netstandard1.4\Facebook.Yoga.pdb" target="runtimes\win8-arm\lib\netstandard"/>    
+    <file src="..\yoga_windows\bin\Release\netstandard1.4\Facebook.Yoga.dll" target="runtimes\win8-arm\lib\netstandard"/>
+    <file src="..\yoga_windows\bin\Release\netstandard1.4\Facebook.Yoga.pdb" target="runtimes\win8-arm\lib\netstandard"/>    
 
     <!-- Native -->
     <file src="..\yoga_native\bin\x86\Release\Yoga.dll" target="runtimes\win-x86\native"/>

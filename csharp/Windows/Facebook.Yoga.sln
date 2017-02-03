@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26127.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{51A8E803-C084-431F-9130-F277481C2BB2}"
 EndProject
@@ -9,10 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NETStandard", "NETStandard"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yoga", "..\Yoga\Yoga.vcxproj", "{0446C86B-F47B-4C46-B673-C7AE0CFF35D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Yoga", "Facebook.Yoga\Facebook.Yoga.csproj", "{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0446C86B-F47B-4C46-B673-C7AE0CFF35D5} = {0446C86B-F47B-4C46-B673-C7AE0CFF35D5}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facebook.Yoga", "Facebook.Yoga\Facebook.Yoga.csproj", "{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,28 +37,28 @@ Global
 		{0446C86B-F47B-4C46-B673-C7AE0CFF35D5}.Release|x64.Build.0 = Release|x64
 		{0446C86B-F47B-4C46-B673-C7AE0CFF35D5}.Release|x86.ActiveCfg = Release|Win32
 		{0446C86B-F47B-4C46-B673-C7AE0CFF35D5}.Release|x86.Build.0 = Release|Win32
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|ARM.ActiveCfg = Debug|ARM
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|ARM.Build.0 = Debug|ARM
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|x64.ActiveCfg = Debug|x64
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|x64.Build.0 = Debug|x64
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|x86.ActiveCfg = Debug|x86
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Debug|x86.Build.0 = Debug|x86
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|ARM.ActiveCfg = Release|ARM
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|ARM.Build.0 = Release|ARM
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|x64.ActiveCfg = Release|x64
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|x64.Build.0 = Release|x64
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|x86.ActiveCfg = Release|x86
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD}.Release|x86.Build.0 = Release|x86
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|ARM.Build.0 = Debug|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|x64.ActiveCfg = Debug|x64
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|x64.Build.0 = Debug|x64
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|x86.ActiveCfg = Debug|x86
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Debug|x86.Build.0 = Debug|x86
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|ARM.Build.0 = Release|Any CPU
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|x64.ActiveCfg = Release|x64
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|x64.Build.0 = Release|x64
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|x86.ActiveCfg = Release|x86
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0446C86B-F47B-4C46-B673-C7AE0CFF35D5} = {51A8E803-C084-431F-9130-F277481C2BB2}
-		{3AACE384-FDEC-4D91-A3B2-EEB21B46C9AD} = {DCF7899B-A487-49C0-BCDE-DC088B6750C2}
+		{8E2A0D6F-EF97-4A04-ABA1-E9FCE29AD011} = {DCF7899B-A487-49C0-BCDE-DC088B6750C2}
 	EndGlobalSection
 EndGlobal

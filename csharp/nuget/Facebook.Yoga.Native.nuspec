@@ -13,13 +13,13 @@
     <copyright>Copyright 2016 Facebook</copyright>
     <tags>native flexbox flex-box css layout css-layout yoga facebook</tags>
     <dependencies>
-      <group targetFramework=".NETStandard1.6" />
+      <group targetFramework=".NETStandard1.0" />
     </dependencies>
   </metadata>
 
   <files>
     <!-- build -->
-    <file src="Facebook.Yoga.Native.targets" target="build\netstandard"/>
+    <file src="Facebook.Yoga.Native.targets" target="build\netstandard1.0"/>
 
     <!-- lib -->
     <file src="_._" target="lib\netstandard"/>

@@ -19,6 +19,6 @@
    	<!-- macOS -->
    	<file src="..\yoga_mac\bin\Release\*.dll" target="lib\Xamarin.Mac20" />
    	<!-- android -->
-   	<file src="..\yoga_android\bin\Facebook.Yoga.Android\bin\Release\*.dll" target="lib\MonoAndroid" />
+   	<file src="..\yoga_android\bin\Release\*.dll" target="lib\MonoAndroid" />
   </files>
 </package>

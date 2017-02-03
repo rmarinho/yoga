@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Facebook.Yoga</id>
-    <version>1.0.1-pre</version>
+    <version>1.0.2-pre</version>
     <title>Facebook.Yoga</title>
     <authors>Facebook</authors>
     <owners>Facebook</owners>
@@ -23,6 +23,14 @@
     <!-- lib -->
     <file src="..\yoga_windows\bin\Release\netstandard1.4\Facebook.Yoga.dll" target="lib\netstandard"/>
 
+    <!-- iOS -->
+   	<file src="..\yoga_ios\bin\Release\*.dll" target="lib\Xamarin.iOS10" />
+   	<!-- macOS -->
+   	<file src="..\yoga_mac\bin\Release\*.dll" target="lib\Xamarin.Mac20" />
+   	<!-- android -->
+   	<file src="..\yoga_android\bin\Release\*.dll" target="lib\MonoAndroid" />
+
+
     <!-- runtimes -->
     <file src="..\yoga_windows\bin\x86\Release\netstandard1.4\Facebook.Yoga.dll" target="runtimes\win-x86\lib\netstandard"/>
     <file src="..\yoga_windows\bin\x86\Release\netstandard1.4\Facebook.Yoga.pdb" target="runtimes\win-x86\lib\netstandard"/>
@@ -42,12 +50,6 @@
 
     <file src="..\yoga_native\bin\ARM\Release\Yoga.dll" target="runtimes\win8-arm\native"/>
     <file src="..\yoga_native\bin\ARM\Release\Yoga.pdb" target="runtimes\win8-arm\native"/>
-
-       <!-- iOS -->
-   	<file src="..\yoga_ios\bin\Release\*.dll" target="lib\Xamarin.iOS10" />
-   	<!-- macOS -->
-   	<file src="..\yoga_mac\bin\Release\*.dll" target="lib\Xamarin.Mac20" />
-   	<!-- android -->
-   	<file src="..\yoga_android\bin\Release\*.dll" target="lib\MonoAndroid" />
+ 
   </files>
 </package>

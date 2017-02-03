@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Facebook.Yoga.Native</id>
-    <version>1.0.1-pre</version>
+    <version>1.0.2-pre</version>
     <title>Facebook.Yoga.Native</title>
     <authors>Facebook</authors>
     <owners>Facebook</owners>
@@ -19,10 +19,10 @@
 
   <files>
     <!-- build -->
-    <file src="Facebook.Yoga.Native.targets" target="build\netstandard1.6"/>
+    <file src="Facebook.Yoga.Native.targets" target="build\netstandard"/>
 
     <!-- lib -->
-    <file src="_._" target="lib\netstandard1.6"/>
+    <file src="_._" target="lib\netstandard"/>
 
     <!-- Native -->
     <file src="..\yoga_native\bin\x86\Release\Yoga.dll" target="runtimes\win-x86\native"/>

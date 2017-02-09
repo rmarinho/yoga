@@ -36,5 +36,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)YogaValue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)YogaValueExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)YogaWrap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)YogaDisplay.cs" />
   </ItemGroup>
 </Project>

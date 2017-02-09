@@ -132,12 +132,15 @@ JavaEmitter.prototype = Object.create(Emitter.prototype, {
 
   YGUndefined:{value:'YogaConstants.UNDEFINED'},
 
+  YGDisplayFlex:{value:'YogaDisplay.FLEX'},
+  YGDisplayNone:{value:'YogaDisplay.NONE'},
+
   YGWrapNoWrap:{value:'YogaWrap.NO_WRAP'},
   YGWrapWrap:{value:'YogaWrap.WRAP'},
 
   YGNodeCalculateLayout:{value:function(node, dir) {
     this.push(node + '.setDirection(' + dir + ');');
-    this.push(node + '.calculateLayout();');
+    this.push(node + '.calculateLayout(YogaConstants.UNDEFINED, YogaConstants.UNDEFINED);');
   }},
 
   YGNodeInsertChild:{value:function(parentName, nodeName, index) {
@@ -178,6 +181,10 @@ JavaEmitter.prototype = Object.create(Emitter.prototype, {
 
   YGNodeStyleSetDirection:{value:function(nodeName, value) {
     this.push(nodeName + '.setDirection(' + toValueJava(value) + ');');
+  }},
+
+  YGNodeStyleSetDisplay:{value:function(nodeName, value) {
+    this.push(nodeName + '.setDisplay(' + toValueJavascript(value) + ');');
   }},
 
   YGNodeStyleSetFlexBasis:{value:function(nodeName, value) {

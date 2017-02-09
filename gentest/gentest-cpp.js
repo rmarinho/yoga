@@ -28,8 +28,8 @@ CPPEmitter.prototype = Object.create(Emitter.prototype, {
 
   emitPrologue:{value:function() {
     this.push([
-      '#include <yoga/Yoga.h>',
       '#include <gtest/gtest.h>',
+      '#include <yoga/Yoga.h>',
       '',
     ]);
   }},
@@ -118,6 +118,9 @@ CPPEmitter.prototype = Object.create(Emitter.prototype, {
 
   YGUndefined:{value:'YGUndefined'},
 
+  YGDisplayFlex:{value:'YGDisplayFlex'},
+  YGDisplayNone:{value:'YGDisplayNone'},
+
   YGNodeCalculateLayout:{value:function(node, dir) {
     this.push('YGNodeCalculateLayout(' + node + ', YGUndefined, YGUndefined, ' + dir + ');');
   }},
@@ -160,6 +163,10 @@ CPPEmitter.prototype = Object.create(Emitter.prototype, {
 
   YGNodeStyleSetDirection:{value:function(nodeName, value) {
     this.push('YGNodeStyleSetDirection(' + nodeName + ', ' + toValueCpp(value) + ');');
+  }},
+
+  YGNodeStyleSetDisplay:{value:function(nodeName, value) {
+    this.push('YGNodeStyleSetDisplay(' + nodeName + ', ' + toValueCpp(value) + ');');
   }},
 
   YGNodeStyleSetFlexBasis:{value:function(nodeName, value) {

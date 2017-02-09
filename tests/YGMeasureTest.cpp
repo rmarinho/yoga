@@ -7,22 +7,21 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-#include <yoga/Yoga.h>
 #include <gtest/gtest.h>
+#include <yoga/Yoga.h>
 
 static YGSize _measure(YGNodeRef node,
-                        float width,
-                        YGMeasureMode widthMode,
-                        float height,
-                        YGMeasureMode heightMode) {
-  int *measureCount = (int*) YGNodeGetContext(node);
+                       float width,
+                       YGMeasureMode widthMode,
+                       float height,
+                       YGMeasureMode heightMode) {
+  int *measureCount = (int *) YGNodeGetContext(node);
   if (measureCount) {
     (*measureCount)++;
   }
 
-  return YGSize {
-      .width = 10,
-      .height = 10,
+  return YGSize{
+      .width = 10, .height = 10,
   };
 }
 
@@ -64,6 +63,118 @@ TEST(YogaTest, measure_absolute_child_with_no_constraints) {
   YGNodeCalculateLayout(root, YGUndefined, YGUndefined, YGDirectionLTR);
 
   ASSERT_EQ(1, measureCount);
+
+  YGNodeFreeRecursive(root);
+}
+
+TEST(YogaTest, dont_measure_when_min_equals_max) {
+  const YGNodeRef root = YGNodeNew();
+  YGNodeStyleSetAlignItems(root, YGAlignFlexStart);
+  YGNodeStyleSetWidth(root, 100);
+  YGNodeStyleSetHeight(root, 100);
+
+  int measureCount = 0;
+
+  const YGNodeRef root_child0 = YGNodeNew();
+  YGNodeSetContext(root_child0, &measureCount);
+  YGNodeSetMeasureFunc(root_child0, _measure);
+  YGNodeStyleSetMinWidth(root_child0, 10);
+  YGNodeStyleSetMaxWidth(root_child0, 10);
+  YGNodeStyleSetMinHeight(root_child0, 10);
+  YGNodeStyleSetMaxHeight(root_child0, 10);
+  YGNodeInsertChild(root, root_child0, 0);
+
+  YGNodeCalculateLayout(root, YGUndefined, YGUndefined, YGDirectionLTR);
+
+  ASSERT_EQ(0, measureCount);
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetLeft(root_child0));
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetTop(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetWidth(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetHeight(root_child0));
+
+  YGNodeFreeRecursive(root);
+}
+
+TEST(YogaTest, dont_measure_when_min_equals_max_percentages) {
+  const YGNodeRef root = YGNodeNew();
+  YGNodeStyleSetAlignItems(root, YGAlignFlexStart);
+  YGNodeStyleSetWidth(root, 100);
+  YGNodeStyleSetHeight(root, 100);
+
+  int measureCount = 0;
+
+  const YGNodeRef root_child0 = YGNodeNew();
+  YGNodeSetContext(root_child0, &measureCount);
+  YGNodeSetMeasureFunc(root_child0, _measure);
+  YGNodeStyleSetMinWidthPercent(root_child0, 10);
+  YGNodeStyleSetMaxWidthPercent(root_child0, 10);
+  YGNodeStyleSetMinHeightPercent(root_child0, 10);
+  YGNodeStyleSetMaxHeightPercent(root_child0, 10);
+  YGNodeInsertChild(root, root_child0, 0);
+
+  YGNodeCalculateLayout(root, YGUndefined, YGUndefined, YGDirectionLTR);
+
+  ASSERT_EQ(0, measureCount);
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetLeft(root_child0));
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetTop(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetWidth(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetHeight(root_child0));
+
+  YGNodeFreeRecursive(root);
+}
+
+TEST(YogaTest, dont_measure_when_min_equals_max_mixed) {
+  const YGNodeRef root = YGNodeNew();
+  YGNodeStyleSetAlignItems(root, YGAlignFlexStart);
+  YGNodeStyleSetWidth(root, 100);
+  YGNodeStyleSetHeight(root, 100);
+
+  int measureCount = 0;
+
+  const YGNodeRef root_child0 = YGNodeNew();
+  YGNodeSetContext(root_child0, &measureCount);
+  YGNodeSetMeasureFunc(root_child0, _measure);
+  YGNodeStyleSetMinWidthPercent(root_child0, 10);
+  YGNodeStyleSetMaxWidthPercent(root_child0, 10);
+  YGNodeStyleSetMinHeight(root_child0, 10);
+  YGNodeStyleSetMaxHeight(root_child0, 10);
+  YGNodeInsertChild(root, root_child0, 0);
+
+  YGNodeCalculateLayout(root, YGUndefined, YGUndefined, YGDirectionLTR);
+
+  ASSERT_EQ(0, measureCount);
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetLeft(root_child0));
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetTop(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetWidth(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetHeight(root_child0));
+
+  YGNodeFreeRecursive(root);
+}
+
+TEST(YogaTest, dont_measure_when_min_equals_max_mixed_2) {
+  const YGNodeRef root = YGNodeNew();
+  YGNodeStyleSetAlignItems(root, YGAlignFlexStart);
+  YGNodeStyleSetWidth(root, 100);
+  YGNodeStyleSetHeight(root, 100);
+
+  int measureCount = 0;
+
+  const YGNodeRef root_child0 = YGNodeNew();
+  YGNodeSetContext(root_child0, &measureCount);
+  YGNodeSetMeasureFunc(root_child0, _measure);
+  YGNodeStyleSetMinWidth(root_child0, 10);
+  YGNodeStyleSetMaxWidth(root_child0, 10);
+  YGNodeStyleSetMinHeightPercent(root_child0, 10);
+  YGNodeStyleSetMaxHeightPercent(root_child0, 10);
+  YGNodeInsertChild(root, root_child0, 0);
+
+  YGNodeCalculateLayout(root, YGUndefined, YGUndefined, YGDirectionLTR);
+
+  ASSERT_EQ(0, measureCount);
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetLeft(root_child0));
+  ASSERT_FLOAT_EQ(0, YGNodeLayoutGetTop(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetWidth(root_child0));
+  ASSERT_FLOAT_EQ(10, YGNodeLayoutGetHeight(root_child0));
 
   YGNodeFreeRecursive(root);
 }

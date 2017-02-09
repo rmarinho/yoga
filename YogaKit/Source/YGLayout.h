@@ -18,7 +18,8 @@
 @property (nonatomic, readwrite, assign, setter=setIncludedInLayout:) BOOL isIncludedInLayout;
 
 /**
- The property that decides during layout/sizing whether or not styling properties should be applied. Defaults to NO.
+ The property that decides during layout/sizing whether or not styling properties should be applied.
+ Defaults to NO.
  */
 @property (nonatomic, readwrite, assign, setter=setEnabled:) BOOL isEnabled;
 
@@ -31,6 +32,7 @@
 @property (nonatomic, readwrite, assign) YGPositionType position;
 @property (nonatomic, readwrite, assign) YGWrap flexWrap;
 @property (nonatomic, readwrite, assign) YGOverflow overflow;
+@property (nonatomic, readwrite, assign) YGDisplay display;
 
 @property (nonatomic, readwrite, assign) CGFloat flexGrow;
 @property (nonatomic, readwrite, assign) CGFloat flexShrink;
@@ -84,7 +86,7 @@
 /**
  Get the resolved direction of this node. This won't be YGDirectionInherit
  */
- @property (nonatomic, readonly, assign) YGDirection resolvedDirection;
+@property (nonatomic, readonly, assign) YGDirection resolvedDirection;
 
 /**
  Perform a layout calculation and update the frames of the views in the hierarchy with the results
@@ -92,19 +94,21 @@
 - (void)applyLayout NS_SWIFT_NAME(applyLayout());
 
 /**
- Returns the size of the view if no constraints were given. This could equivalent to calling [self sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
+ Returns the size of the view if no constraints were given. This could equivalent to calling [self
+ sizeThatFits:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)];
  */
- @property (nonatomic, readonly, assign) CGSize intrinsicSize;
+@property (nonatomic, readonly, assign) CGSize intrinsicSize;
 
 /**
  Returns the number of children that are using Flexbox.
  */
- @property (nonatomic, readonly, assign) NSUInteger numberOfChildren;
+@property (nonatomic, readonly, assign) NSUInteger numberOfChildren;
 
 /**
- Return a BOOL indiciating whether or not we this node contains any subviews that are included in Yoga's layout.
+ Return a BOOL indiciating whether or not we this node contains any subviews that are included in
+ Yoga's layout.
  */
- @property (nonatomic, readonly, assign) BOOL isLeaf;
+@property (nonatomic, readonly, assign) BOOL isLeaf;
 
 /**
  Mark that a view's layout needs to be recalculated. Only works for leaf views.

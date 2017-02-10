@@ -371,19 +371,19 @@ namespace Facebook.Yoga
             ForceGC();
             int instanceCount = YogaNode.GetInstanceCount();
             YogaNode child = new YogaNode();
-            Assert.AreEqual(instanceCount + 1, YogaNode.GetInstanceCount());
-
-            TestParentDestructorForGC(child, instanceCount + 1);
-            ForceGC();
-
+            int number = 100;
+            for (int i = 0; i < number; i++)
+            {
+                TestParentDestructorForGC(new YogaNode(), instanceCount + 1);
+                ForceGC();
+            }
             Assert.IsNull(child.Parent);
-            Assert.AreEqual(instanceCount + 1, YogaNode.GetInstanceCount());
+            Assert.That(YogaNode.GetInstanceCount(), Is.LessThan(number), "any collected");
         }
 
         private void TestParentDestructorForGC(YogaNode child, int instanceCount)
         {
             YogaNode parent = new YogaNode();
-            Assert.AreEqual(instanceCount + 1, YogaNode.GetInstanceCount());
             parent.Insert(0, child);
         }
 
